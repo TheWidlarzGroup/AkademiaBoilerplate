@@ -1,4 +1,4 @@
-import { AvailableParamLists } from 'Navigation/paramList'
+import { AvailableParamLists } from 'Navigation/types/paramList'
 import { NavigationProp, RouteProp } from '@react-navigation/core/lib/typescript/src/types'
 
 declare module '@react-navigation/native' {

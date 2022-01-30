@@ -4,7 +4,7 @@ import {
   HomeRoutes,
   RootRoutes,
   UnauthorizedRoutes,
-} from 'Navigation/routes'
+} from 'Navigation/types/routes'
 
 export type UnauthorizedNavigatorParamList = {}
 
