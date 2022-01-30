@@ -1502,17 +1502,17 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native@*", "@types/react-native@^0.66.15":
+  version "0.66.15"
+  resolved "https://registry.npmjs.org/@types/react-native/-/react-native-0.66.15.tgz#d332d82b04635adabbd8e1976f9547ce8662300b"
+  integrity sha512-qNK3LZhNpSd2Hdr0OFdvQ/VOb1qcjNhmw96LsOtxIN+1RtXHO/1dVzxYUlWnKMCtV+E5WSaWM703c9Q7gG9tyg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-native@^0.65":
   version "0.65.20"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.65.20.tgz#14e7e2a70ef57393150d26df10c86497ce2949ea"
   integrity sha512-LIgRFtJOYKRwu792iMvXQxWRCYVloglO+r10V+0O2wsg2LTWimpZLemcxMPMOu3ZS7/tcG6bzPnUKrIVEmsMZQ==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react-native@^0.66.15":
-  version "0.66.15"
-  resolved "https://registry.npmjs.org/@types/react-native/-/react-native-0.66.15.tgz#d332d82b04635adabbd8e1976f9547ce8662300b"
-  integrity sha512-qNK3LZhNpSd2Hdr0OFdvQ/VOb1qcjNhmw96LsOtxIN+1RtXHO/1dVzxYUlWnKMCtV+E5WSaWM703c9Q7gG9tyg==
   dependencies:
     "@types/react" "*"
 
@@ -1551,13 +1551,23 @@
     "@types/react-native" "^0.65"
     "@types/styled-components" "*"
 
-"@types/styled-components@*", "@types/styled-components@^5.1.21":
+"@types/styled-components@*":
   version "5.1.21"
   resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.21.tgz#39f6bdc4103254d899531ef099dae5619b039cdb"
   integrity sha512-lQzA0T6CaLXoeiOkSe2US2JfFgJV2/yJ8W1BaJubQQh2wdq7H+qScQQfbjURyLkgI1Ig+S/jRHCrWikfMHC6zA==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
+    csstype "^3.0.2"
+
+"@types/styled-components@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.6.tgz#b47460f1684072576999955b5b5153e6f238622c"
+  integrity sha512-YN1j99dOL92T+76qhQcrPUb2nKZLzawko9j3IIwTHdKloMx20WwcGkBwdpbi8SpAkTc362rgfIllqPdSUplmRw==
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    "@types/react-native" "*"
     csstype "^3.0.2"
 
 "@types/yargs-parser@*":
