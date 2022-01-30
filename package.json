@@ -45,6 +45,8 @@
     "react-native-device-info": "^8.4.8",
     "react-native-fast-image": "^8.5.11",
     "react-native-gesture-handler": "^2.2.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-reanimated": "^2.3.1",
     "react-native-safe-area-context": "^3.3.2",
     "react-query": "^3.34.12",
     "styled-components": "^5.3.3"
@@ -64,6 +66,7 @@
     "@typescript-eslint/parser": "^4.15.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
+    "babel-plugin-module-resolver": "^4.1.0",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-typescript": "^12.3.1",

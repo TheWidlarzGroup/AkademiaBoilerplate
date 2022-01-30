@@ -1,0 +1,23 @@
+name: Check
+
+on: [push]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: c-hive/gha-yarn-cache@v1
+      - name: install node modules
+        run: yarn install --ignore-scripts
+      - name: eslint check
+        run: yarn lint
+      - name: type-check
+        run: yarn type-check
+      - name: formating-check
+        run: yarn format:check
+      - name: test-check
+        run: yarn test

@@ -1,10 +1,10 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-import local from 'Locales/local.json'
+import enLocale from 'Locales/en.json'
 
 export enum LANGUAGES {
-  LOCAL = 'en',
+  EN = 'en',
 }
 
 export enum NAMESPACES {
@@ -13,12 +13,12 @@ export enum NAMESPACES {
 
 i18n.use(initReactI18next).init({
   compatibilityJSON: 'v3',
-  fallbackLng: LANGUAGES.LOCAL,
+  fallbackLng: LANGUAGES.EN,
   ns: NAMESPACES.DEFAULT,
   debug: __DEV__,
   resources: {
-    [LANGUAGES.LOCAL]: {
-      [NAMESPACES.DEFAULT]: local,
+    [LANGUAGES.EN]: {
+      [NAMESPACES.DEFAULT]: enLocale,
     },
   },
   interpolation: {

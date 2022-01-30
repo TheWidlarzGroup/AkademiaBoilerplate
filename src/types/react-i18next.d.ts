@@ -1,5 +1,5 @@
 import 'react-i18next'
-import local from 'Locales/local.json'
+import en from 'Locales/en.json'
 import { NAMESPACES } from '../i18n/i18n'
 
 declare module 'react-i18next' {
@@ -8,7 +8,7 @@ declare module 'react-i18next' {
     defaultNS: NAMESPACES.DEFAULT
     // custom resources type
     resources: {
-      local: typeof local
+      local: typeof en
     }
   }
 }

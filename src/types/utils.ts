@@ -8,4 +8,4 @@ export const exhaustiveTypeCheck = (x: never, strict = false) => {
   }
 }
 
-export type InferReactProps<T> = T extends FC<infer Props> ? Props : unknown
+export type InferReactProps<T> = T extends FC<infer Props> ? Props : never
