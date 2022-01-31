@@ -1,7 +1,7 @@
 import React from 'react'
 import { initialWindowMetrics, SafeAreaProvider } from 'react-native-safe-area-context'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
-import { StyleSheet, Text } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { isIos } from 'Utils/device'
 import { theme } from 'Theme/index'
 import { GlobalProviders } from 'Providers/GlobalProviders'
