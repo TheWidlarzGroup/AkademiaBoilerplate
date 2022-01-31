@@ -1,9 +1,6 @@
-/** @format */
-
 // we always make sure 'react-native' gets included first
-
 import 'react-native'
-// @ts-ignore
+
 import 'react-native-gesture-handler/jestSetup'
 
 // @ts-ignore
