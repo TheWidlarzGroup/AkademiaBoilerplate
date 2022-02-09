@@ -1,0 +1,54 @@
+#!/usr/bin/env node
+
+const childProcess = require('child_process')
+const os = require('os')
+
+/**
+ * Do all things that need to be done after installing packages
+ *
+ * Yes, it slows down package installation a little, but it's nice to not
+ * have to remember these extra steps.
+ */
+;[
+  // Kill the metro bundler if it's running.
+  {
+    command: 'pkill -f "cli.js start" || set exit 0',
+    onlyPlatforms: ['darwin', 'linux'],
+    skip: process.env.GITHUB_ACTIONS === 'true',
+  },
+  // Run gradlew clean command
+  {
+    command: './gradlew clean',
+    cwd: 'android',
+    onlyPlatforms: ['darwin', 'linux'],
+    skip: process.env.GITHUB_ACTIONS === 'true',
+  },
+  // on iOS, make sure our native modules are installed
+  {
+    command: 'pod install --repo-update',
+    cwd: 'ios',
+    onlyPlatforms: ['darwin'],
+    // https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
+    // GITHUB_ACTIONS is always set to true by default when action is run from gh workflow
+    skip: process.env.GITHUB_ACTIONS === 'true',
+  },
+]
+  .filter(({ onlyPlatforms }) => !onlyPlatforms || onlyPlatforms.includes(os.platform()))
+  .forEach((commandAndOptions) => {
+    const { command, onlyPlatforms: _, ...options } = commandAndOptions
+
+    const shouldSkip = options.skip || false
+
+    if (shouldSkip) {
+      process.exit(0) // exit with success
+    }
+
+    try {
+      childProcess.execSync(command, {
+        stdio: 'inherit',
+        ...options,
+      })
+    } catch (error) {
+      process.exit(error.status)
+    }
+  })
